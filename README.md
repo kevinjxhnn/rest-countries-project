@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# World Countries App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application allows users to explore information about countries worldwide. It includes features such as viewing all countries, searching for specific countries, filtering by region, and displaying detailed information about each country. Additionally, the app offers a dark theme/light theme toggle for user preference.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 1. View All Countries
 
-### `npm start`
+On the homepage, users can see a list of all countries fetched from the provided API. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Search for a Country
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users can search for a specific country using the search input field. The search functionality is implemented to filter countries dynamically as the user types.
 
-### `npm test`
+### 3. Filter Countries by Region
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A region filter allows users to narrow down the displayed countries based on their geographic regions.
 
-### `npm run build`
+### 4. Combined Search and Filter
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The search and filter features work together seamlessly. For example, searching for a country within a specific region will display only the relevant result.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Detailed Country Information
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clicking on a particular country navigates the user to a dedicated page (`/<country_name>`) using React Router. Here, detailed information about the selected country is displayed.
 
-### `npm run eject`
+### 6. Dark Theme / Light Theme Toggle
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app provides a theme toggle feature using React Context. Users can switch between dark and light themes based on their preference.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
