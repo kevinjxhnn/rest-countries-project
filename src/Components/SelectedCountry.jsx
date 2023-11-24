@@ -234,13 +234,13 @@ export const SelectedCountry = () => {
         </div>
         <div className="border-country-set">
           {Object.keys(country).includes("borders")
-            ? country.borders.map((m) => {
+            ? country.borders.map((name) => {
                 return (
                   <div
                     className="border-country"
-                    key={m}
+                    key={name}
                     onClick={() => {
-                      navigate(`/country/${m}`);
+                      navigate(`/country/${name}`);
                     }}
                     style={{
                       backgroundColor: darkContext ? "#2b3845" : "white",
@@ -248,7 +248,7 @@ export const SelectedCountry = () => {
                       color: darkContext ? "white" : "#2b3845",
                     }}
                   >
-                    {countries[border.indexOf(m)].name.common}
+                    {countries[border.indexOf(name)].name.common}
                   </div>
                 );
               })
