@@ -80,11 +80,11 @@ function App() {
             <Route
               path="country/:id"
               element={
-                <countryAllContext.Provider value={filterCountry}>
+                
                   <isDarkContext.Provider value={isDark}>
                     <SelectedCountry />
                   </isDarkContext.Provider>
-                </countryAllContext.Provider>
+                
               }
             ></Route>
           </Routes>

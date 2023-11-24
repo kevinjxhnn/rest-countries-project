@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { isDarkContext, countryAllContext } from "./App";
 
-
 function CountryCard() {
   const darkContext = React.useContext(isDarkContext);
   const countriesDataContext = React.useContext(countryAllContext);

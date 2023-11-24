@@ -1,10 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { isDarkContext, countryAllContext } from "./App";
+import { isDarkContext } from "./App";
+import LoadingScreen from "./Loader";
 
 export const SelectedCountry = () => {
   const darkContext = useContext(isDarkContext);
-  const countries = React.useContext(countryAllContext);
+  const [loading, setLoading] = useState(true);
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://restcountries.com/v3.1/all");
+        const listOfData = await response.json();
+        setCountries(listOfData);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const { id } = useParams();
 
@@ -12,24 +30,28 @@ export const SelectedCountry = () => {
 
   const country = countries.find((country) => country.cca3.includes(id));
 
-  return (
+  const border = countries.reduce((acc, curr) => {
+    return [...acc, curr.cca3];
+  }, []);
+
+  return loading ? (
+    <LoadingScreen isDark={darkContext} />
+  ) : (
     <div className="selected-country">
       <div
         className="navigate-back"
         onClick={() => navigate(-1)}
         style={{
-          color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+          color: darkContext ? "white" : "#2b3845",
         }}
       >
         <p
-          style={{ color: darkContext ? "white" : "hsl(200, 15%, 8%)" }}
+          style={{ color: darkContext ? "white" : "#2b3845" }}
           className="material-symbols-outlined"
         >
           arrow_back
         </p>
-        <p style={{ color: darkContext ? "white" : "hsl(200, 15%, 8%)" }}>
-          Go back
-        </p>
+        <p style={{ color: darkContext ? "white" : "#2b3845" }}>Go back</p>
       </div>
       <div className="selected-container">
         <div className="selected-flag">
@@ -201,6 +223,36 @@ export const SelectedCountry = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="border-countries">
+        <div
+          className="border-country-heading"
+          style={{ color: darkContext ? "white" : "#2b3845" }}
+        >
+          Border Countries:&nbsp;
+        </div>
+        <div className="border-country-set">
+          {Object.keys(country).includes("borders")
+            ? country.borders.map((m) => {
+                return (
+                  <div
+                    className="border-country"
+                    key={m}
+                    onClick={() => {
+                      navigate(`/country/${m}`);
+                    }}
+                    style={{
+                      backgroundColor: darkContext ? "#2b3845" : "white",
+
+                      color: darkContext ? "white" : "#2b3845",
+                    }}
+                  >
+                    {countries[border.indexOf(m)].name.common}
+                  </div>
+                );
+              })
+            : "None"}
         </div>
       </div>
     </div>

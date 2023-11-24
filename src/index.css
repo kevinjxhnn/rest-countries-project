@@ -165,7 +165,7 @@ code {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  margin-left: 6rem;
+  margin-left: 2rem;
   cursor: pointer;
   border: 1px solid white;
   height: 3rem;
@@ -213,14 +213,29 @@ code {
   align-items: center;
 }
 
-.selected-country-info-heading {
+.selected-country-info-heading, .border-country-heading {
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-.selected-information {
-  line-height: 0.4rem;
+.border-countries{
+  padding: 2rem;
 }
+
+.border-country-set{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5px;
+}
+
+
+.border-country{
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  padding: 5px;
+}
+
 
 .selected-country-info {
   max-width: 12rem;
