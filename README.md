@@ -2,6 +2,8 @@
 
 This React application allows users to explore information about countries worldwide. It includes features such as viewing all countries, searching for specific countries, filtering by region, and displaying detailed information about each country. Additionally, the app offers a dark theme/light theme toggle for user preference.
 
+--- 
+
 ## Features
 
 ### 1. View All Countries
@@ -27,4 +29,29 @@ Clicking on a particular country navigates the user to a dedicated page (`/<coun
 ### 6. Dark Theme / Light Theme Toggle
 
 The app provides a theme toggle feature using React Context. Users can switch between dark and light themes based on their preference.
+
+---
+
+## Getting started
+
+### Steps
+
+1. Clone the repository.
+
+``` bash
+git clone https://github.com/kevinjxhnn/rest-countries-project.git
+```
+
+2. cd into the directory and install all dependencies.
+
+```bash
+npm install
+```
+
+
+3. Run the app with the following command
+```bash
+npm start
+```
+
 
