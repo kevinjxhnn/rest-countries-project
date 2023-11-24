@@ -1,4 +1,4 @@
-# World Countries App
+# 🇮🇴 🇮🇳 World Countries App 🇧🇷 🇦🇹
 
 This React application allows users to explore information about countries worldwide. It includes features such as viewing all countries, searching for specific countries, filtering by region, and displaying detailed information about each country. Additionally, the app offers a dark theme/light theme toggle for user preference.
 
@@ -24,7 +24,7 @@ The search and filter features work together seamlessly. For example, searching 
 
 ### 5. Detailed Country Information
 
-Clicking on a particular country navigates the user to a dedicated page (`/<country_name>`) using React Router. Here, detailed information about the selected country is displayed.
+Clicking on a particular country navigates the user to a dedicated page using React Router. Here, detailed information about the selected country is displayed.
 
 ### 6. Dark Theme / Light Theme Toggle
 
