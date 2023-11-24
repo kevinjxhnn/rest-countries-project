@@ -6,7 +6,7 @@ function Header({ isDark, setIsDark }) {
     <header
       className="header"
       style={{
-        backgroundColor: isDark ? "hsl(209, 23%, 22%)" : "white",
+        backgroundColor: isDark ? "#2f3d4b" : "white",
       }}
     >
       <h2

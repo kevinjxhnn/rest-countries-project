@@ -21,7 +21,7 @@ function CountryCard() {
                 navigate(`country/${country.cca3}`);
               }}
               style={{
-                backgroundColor: darkContext ? "hsl(209, 23%, 24%)" : "white",
+                backgroundColor: darkContext ? "#2f3d4b" : "white",
               }}
             >
               <div className="flag">
@@ -30,7 +30,7 @@ function CountryCard() {
               <div className="card-info">
                 <div
                   className="country-name"
-                  style={{ color: darkContext ? "white" : "hsl(200, 15%, 8%)" }}
+                  style={{ color: darkContext ? "white" : "#2f3d4b" }}
                 >
                   <h3>{country.name.common}</h3>
                 </div>
@@ -38,7 +38,7 @@ function CountryCard() {
                   <h4
                     className="country-info-heading"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     Population:&nbsp;
@@ -46,7 +46,7 @@ function CountryCard() {
                   <p
                     className="country-info"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     {country.population}
@@ -56,7 +56,7 @@ function CountryCard() {
                   <h4
                     className="country-info-heading"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     Region:&nbsp;
@@ -64,7 +64,7 @@ function CountryCard() {
                   <p
                     className="country-info"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     {country.region}
@@ -74,7 +74,7 @@ function CountryCard() {
                   <h4
                     className="country-info-heading"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     Capital:&nbsp;
@@ -82,7 +82,7 @@ function CountryCard() {
                   <p
                     className="country-info"
                     style={{
-                      color: darkContext ? "white" : "hsl(200, 15%, 8%)",
+                      color: darkContext ? "white" : "#2f3d4b",
                     }}
                   >
                     {country.capital}
@@ -95,7 +95,7 @@ function CountryCard() {
       ) : (
         <div
           className="no-data"
-          style={{ color: darkContext ? "white" : "hsl(200, 15%, 8%)" }}
+          style={{ color: darkContext ? "white" : "#2f3d4b" }}
         >
           No Such Countries Found
         </div>

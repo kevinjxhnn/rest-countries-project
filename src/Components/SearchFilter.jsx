@@ -12,13 +12,13 @@ function SearchFilter({
       <div
         className="search-button"
         style={{
-          backgroundColor: isDark ? "hsl(209, 23%, 22%)" : "",
+          backgroundColor: isDark ? "#2b3845" : "",
         }}
       >
         <p
           className="material-symbols-outlined"
           style={{
-            color: isDark ? "white" : "hsl(200, 15%, 8%)",
+            color: isDark ? "white" : "#2f3d4b",
           }}
         >
           search
@@ -31,8 +31,8 @@ function SearchFilter({
             setSearchCountry(e.target.value);
           }}
           style={{
-            backgroundColor: isDark ? "hsl(209, 23%, 22%)" : "white",
-            color: isDark ? "white" : "hsl(200, 15%, 8%)",
+            backgroundColor: isDark ? "#2f3d4b" : "white",
+            color: isDark ? "white" : "#2f3d4b",
           }}
           className={`${!isDark ? "white-input" : "dark-input"}`}
         ></input>
@@ -46,8 +46,8 @@ function SearchFilter({
             setSearchRegion(e.target.value);
           }}
           style={{
-            backgroundColor: isDark ? "hsl(209, 23%, 22%)" : "white",
-            color: isDark ? "white" : "hsl(200, 15%, 8%)",
+            backgroundColor: isDark ? "#2f3d4b" : "white",
+            color: isDark ? "white" : "#2f3d4b",
           }}
         >
           <option value="">All Region</option>
